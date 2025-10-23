@@ -1,5 +1,6 @@
 package caramel;
 
+import caramel.impl.docx.DocxFileCreate;
 import caramel.impl.pdf.PdfAnalysisPronounce;
 import caramel.impl.xml.XmlFileCreate;
 
@@ -15,16 +16,20 @@ public class Entry {
     public static void main(String[] args) throws IOException {
         Set<String> hadTxtFile = hadFile(BASE_PATH + "\\txt");
         Set<String> hadXmlFile = hadFile(BASE_PATH + "\\xml");
+        Set<String> hadDocxFile = hadFile(BASE_PATH + "\\docx");
         for (File pdfFile : new File(BASE_PATH + "\\pdf").listFiles()) {
             String txtFileName = pdfFile.getName().replace("pdf", "txt");
             String xmlFileName = pdfFile.getName().replace("pdf", "xml");
-            if (hadXmlFile.contains(xmlFileName)) {
-                continue;
-            }
+            String docxFileName = pdfFile.getName().replace("pdf", "docx");
             if (!hadTxtFile.contains(txtFileName)) {
-                PdfAnalysisPronounce.process(pdfFile.getName(), txtFileName);
+                PdfAnalysisPronounce.process(txtFileName, pdfFile.getName());
             }
-            XmlFileCreate.create(xmlFileName, txtFileName);
+            if (!hadXmlFile.contains(xmlFileName)) {
+                XmlFileCreate.create(xmlFileName, txtFileName);
+            }
+            if (!hadDocxFile.contains(docxFileName)) {
+                DocxFileCreate.create(docxFileName, xmlFileName);
+            }
         }
     }
 

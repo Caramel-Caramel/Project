@@ -9,7 +9,7 @@ import java.io.IOException;
 
 public class PdfAnalysisPronounce {
 
-    public static void process(String pdfFileName, String txtFileName) throws IOException {
+    public static void process(String txtFileName, String pdfFileName) throws IOException {
         String[] textArray = TextGet.getText(pdfFileName);
         StringBuilder sb = new StringBuilder();
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(Entry.BASE_PATH + "\\txt\\" + txtFileName))) {
