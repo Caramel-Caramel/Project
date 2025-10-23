@@ -1,5 +1,6 @@
 package caramel.impl.pdf;
 
+import caramel.Entry;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.text.PDFTextStripper;
 import org.apache.pdfbox.text.TextPosition;
@@ -11,12 +12,12 @@ import java.util.List;
 public class TextGet {
 
     public static void main(String[] args) throws IOException {
-        String[] text = getText("E:\\102Project\\anthony\\pdf2word-with-jyutping\\src\\main\\resources\\pdf\\CHI1001_2.4_主題與形象分析.pdf");
+        String[] text = getText("CHI1001_2.4_主題與形象分析.pdf");
         System.out.println(text);
     }
 
-    public static String[] getText(String pdfFilePathAndName) throws IOException {
-        try (PDDocument document = PDDocument.load(new File(pdfFilePathAndName))) {
+    public static String[] getText(String pdfFileName) throws IOException {
+        try (PDDocument document = PDDocument.load(new File(Entry.BASE_PATH + "\\pdf\\" + pdfFileName))) {
             PDFTextStripper pdfStripper = new PDFTextStripper() {
                 // 可以重写writeString方法来自定义文本输出格式或处理逻辑
                 @Override
