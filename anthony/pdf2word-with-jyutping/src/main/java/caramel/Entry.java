@@ -3,6 +3,7 @@ package caramel;
 import caramel.impl.docx.DocxFileCreate;
 import caramel.impl.pdf.PdfAnalysisPronounce;
 import caramel.impl.xml.XmlFileCreate;
+import freemarker.template.TemplateException;
 
 import java.io.File;
 import java.io.IOException;
@@ -13,7 +14,7 @@ public class Entry {
 
     public static final String BASE_PATH = "E:\\102Project\\anthony\\pdf2word-with-jyutping\\src\\main\\resources";
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, TemplateException {
         Set<String> hadTxtFile = hadFile(BASE_PATH + "\\txt");
         Set<String> hadXmlFile = hadFile(BASE_PATH + "\\xml");
         Set<String> hadDocxFile = hadFile(BASE_PATH + "\\docx");
