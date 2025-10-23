@@ -295,7 +295,7 @@ public class XmlCst {
             "    <w:sz-cs w:val=\"24\"/>\n" +
             "    <w:lang w:val=\"EN-US\" w:fareast=\"ZH-CN\"/>\n" +
             "</w:rPr>\n" +
-            "<w:instrText>EQ \\* jc0 \\* &quot;Font:华文细黑&quot; \\* hps14 \\o \\ad(\\s \\up 14(${jyutping}),${text})</w:instrText>\n" +
+            "<w:instrText>EQ \\* jc0 \\* &quot;Font:Calibri&quot; \\* hps14 \\o \\ad(\\s \\up 14(${jyutping}),${text})</w:instrText>\n" +
             "</w:r>\n" +
             "<w:r>\n" +
             "<w:rPr>\n" +
