@@ -11,10 +11,10 @@ public class XmlCst {
             "                xmlns:wx=\"http://schemas.microsoft.com/office/word/2003/auxHint\"\n" +
             "                xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:dt=\"uuid:C2F41010-65B3-11d1-A29F-00AA00C14882\"\n" +
             "                w:macrosPresent=\"no\" w:embeddedObjPresent=\"no\" w:ocxPresent=\"no\" xml:space=\"preserve\"\n" +
-            "                xmlns:wpsCustomData=\"http://www.wps.cn/officeDocument/2013/wpsCustomData\"><o:DocumentProperties><o:Author>86188</o:Author><o:LastAuthor>WPS_1622591279</o:LastAuthor><o:Created>2022-01-02T03:21:00Z</o:Created><o:LastSaved>2025-10-20T18:12:34Z</o:LastSaved><o:TotalTime>0</o:TotalTime><o:Pages>1</o:Pages><o:Words>0</o:Words><o:Characters>0</o:Characters><o:Lines>0</o:Lines><o:Paragraphs>0</o:Paragraphs><o:CharactersWithSpaces>0</o:CharactersWithSpaces><o:Version>14</o:Version></o:DocumentProperties>\n" +
-            "    <o:CustomDocumentProperties><o:KSOProductBuildVer dt:dt=\"string\">2052-12.1.0.23125</o:KSOProductBuildVer>\n" +
-            "        <o:ICV dt:dt=\"string\">67F77E478B5F4AF3A5E6E53EFB5DF264_13</o:ICV>\n" +
-            "        <o:KSOTemplateDocerSaveRecord dt:dt=\"string\">eyJoZGlkIjoiNGI1MTllZTQ0YTg4MGMxMzcwODRlOTgxZTE1YTE2YTkiLCJ1c2VySWQiOiIxMjExMjc4NTc4In0=</o:KSOTemplateDocerSaveRecord></o:CustomDocumentProperties>\n" +
+            "                xmlns:wpsCustomData=\"http://www.wps.cn/officeDocument/2013/wpsCustomData\"><o:DocumentProperties><o:Author>86188</o:Author><o:LastAuthor>WPS_1622591279</o:LastAuthor><o:Created>2022-01-02T03:21:00Z</o:Created><o:LastSaved>2025-10-23T07:40:47Z</o:LastSaved><o:TotalTime>20160</o:TotalTime><o:Pages>1</o:Pages><o:Words>18</o:Words><o:Characters>30</o:Characters><o:Lines>0</o:Lines><o:Paragraphs>0</o:Paragraphs><o:CharactersWithSpaces>35</o:CharactersWithSpaces><o:Version>14</o:Version></o:DocumentProperties>\n" +
+            "    <o:CustomDocumentProperties><o:KSOTemplateDocerSaveRecord dt:dt=\"string\">eyJoZGlkIjoiYmVlODE3NDVmYTkxYmU5MWI1MzRjODc0ZWQ5ODA3YmIiLCJ1c2VySWQiOiIxMjExMjc4NTc4In0=</o:KSOTemplateDocerSaveRecord>\n" +
+            "        <o:KSOProductBuildVer dt:dt=\"string\">2052-12.1.0.23125</o:KSOProductBuildVer>\n" +
+            "        <o:ICV dt:dt=\"string\">0105A74F522A4C329BB150B7B2358EB4_12</o:ICV></o:CustomDocumentProperties>\n" +
             "    <w:fonts><w:defaultFonts w:ascii=\"Calibri\" w:fareast=\"宋体\" w:h-ansi=\"Calibri\" w:cs=\"Times New Roman\"/>\n" +
             "        <w:font w:name=\"Times New Roman\"><w:panose-1 w:val=\"02020603050405020304\"/>\n" +
             "            <w:charset w:val=\"00\"/>\n" +
@@ -63,6 +63,30 @@ public class XmlCst {
             "            <w:family w:val=\"SWiss\"/>\n" +
             "            <w:pitch w:val=\"Default\"/>\n" +
             "            <w:sig w:usb-0=\"E4002EFF\" w:usb-1=\"C200247B\" w:usb-2=\"00000009\" w:usb-3=\"00000000\" w:csb-0=\"200001FF\"\n" +
+            "                   w:csb-1=\"00000000\"/></w:font>\n" +
+            "        <w:font w:name=\"Wingdings\"><w:panose-1 w:val=\"05000000000000000000\"/>\n" +
+            "            <w:charset w:val=\"00\"/>\n" +
+            "            <w:family w:val=\"Auto\"/>\n" +
+            "            <w:pitch w:val=\"Default\"/>\n" +
+            "            <w:sig w:usb-0=\"00000000\" w:usb-1=\"00000000\" w:usb-2=\"00000000\" w:usb-3=\"00000000\" w:csb-0=\"80000000\"\n" +
+            "                   w:csb-1=\"00000000\"/></w:font>\n" +
+            "        <w:font w:name=\"Arial\"><w:panose-1 w:val=\"020B0604020202020204\"/>\n" +
+            "            <w:charset w:val=\"00\"/>\n" +
+            "            <w:family w:val=\"Auto\"/>\n" +
+            "            <w:pitch w:val=\"Default\"/>\n" +
+            "            <w:sig w:usb-0=\"E0002EFF\" w:usb-1=\"C000785B\" w:usb-2=\"00000009\" w:usb-3=\"00000000\" w:csb-0=\"400001FF\"\n" +
+            "                   w:csb-1=\"FFFF0000\"/></w:font>\n" +
+            "        <w:font w:name=\"Courier New\"><w:panose-1 w:val=\"02070309020205020404\"/>\n" +
+            "            <w:charset w:val=\"00\"/>\n" +
+            "            <w:family w:val=\"Auto\"/>\n" +
+            "            <w:pitch w:val=\"Default\"/>\n" +
+            "            <w:sig w:usb-0=\"E0002EFF\" w:usb-1=\"C0007843\" w:usb-2=\"00000009\" w:usb-3=\"00000000\" w:csb-0=\"400001FF\"\n" +
+            "                   w:csb-1=\"FFFF0000\"/></w:font>\n" +
+            "        <w:font w:name=\"Symbol\"><w:panose-1 w:val=\"05050102010706020507\"/>\n" +
+            "            <w:charset w:val=\"00\"/>\n" +
+            "            <w:family w:val=\"Auto\"/>\n" +
+            "            <w:pitch w:val=\"Default\"/>\n" +
+            "            <w:sig w:usb-0=\"00000000\" w:usb-1=\"00000000\" w:usb-2=\"00000000\" w:usb-3=\"00000000\" w:csb-0=\"80000000\"\n" +
             "                   w:csb-1=\"00000000\"/></w:font>\n" +
             "        <w:font w:name=\"微软雅黑\"><w:panose-1 w:val=\"020B0503020204020204\"/>\n" +
             "            <w:charset w:val=\"86\"/>\n" +
@@ -196,7 +220,7 @@ public class XmlCst {
             "        <w:style w:type=\"paragraph\" w:styleId=\"2\"><w:name w:val=\"heading 3\"/>\n" +
             "            <w:basedOn w:val=\"a1\"/>\n" +
             "            <w:next w:val=\"a1\"/>\n" +
-            "            <w:semiHidden/>\n" +
+            "            <w:hidden/>\n" +
             "            <w:pPr><w:keepNext/>\n" +
             "                <w:keepLines/>\n" +
             "                <w:spacing w:before=\"260\" w:before-lines=\"0\" w:before-autospacing=\"off\" w:after=\"260\"\n" +
@@ -205,8 +229,7 @@ public class XmlCst {
             "            <w:rPr><w:rFonts w:ascii=\"Calibri\" w:h-ansi=\"Calibri\" w:hint=\"default\"/>\n" +
             "                <w:b/>\n" +
             "                <w:sz w:val=\"32\"/></w:rPr></w:style>\n" +
-            "        <w:style w:type=\"character\" w:styleId=\"a4\" w:default=\"on\"><w:name w:val=\"Default Paragraph Font\"/>\n" +
-            "            <w:semiHidden/></w:style>\n" +
+            "        <w:style w:type=\"character\" w:styleId=\"a4\" w:default=\"on\"><w:name w:val=\"Default Paragraph Font\"/></w:style>\n" +
             "        <w:style w:type=\"table\" w:styleId=\"a3\" w:default=\"on\"><w:name w:val=\"Normal Table\"/>\n" +
             "            <w:semiHidden/>\n" +
             "            <w:tblPr><w:tblCellMar><w:top w:w=\"0\" w:type=\"dxa\"/><w:left w:w=\"108\" w:type=\"dxa\"/><w:bottom w:w=\"0\"\n" +
@@ -215,7 +238,7 @@ public class XmlCst {
             "    <w:bgPict><w:background/>\n" +
             "        <v:background id=\"_x0000_s1025\"><v:fill on=\"f\" focussize=\"0,0\"/></v:background></w:bgPict>\n" +
             "    <w:docPr><w:view w:val=\"print\"/>\n" +
-            "        <w:zoom w:percent=\"190\"/>\n" +
+            "        <w:zoom w:percent=\"135\"/>\n" +
             "        <w:characterSpacingControl w:val=\"CompressPunctuation\"/>\n" +
             "        <w:documentProtection w:enforcement=\"off\"/>\n" +
             "        <w:punctuationKerning/>\n" +
@@ -272,7 +295,7 @@ public class XmlCst {
             "    <w:sz-cs w:val=\"24\"/>\n" +
             "    <w:lang w:val=\"EN-US\" w:fareast=\"ZH-CN\"/>\n" +
             "</w:rPr>\n" +
-            "<w:instrText>EQ \\* jc0 \\* &quot;Font:华文细黑&quot; \\* hps14 \\o \\ad(\\s \\up 9(${jyutping}),${text})</w:instrText>\n" +
+            "<w:instrText>EQ \\* jc0 \\* &quot;Font:华文细黑&quot; \\* hps14 \\o \\ad(\\s \\up 14(${jyutping}),${text})</w:instrText>\n" +
             "</w:r>\n" +
             "<w:r>\n" +
             "<w:rPr>\n" +
@@ -290,7 +313,7 @@ public class XmlCst {
             "        <w:sz-cs w:val=\"24\"/>\n" +
             "        <w:lang w:val=\"EN-US\" w:fareast=\"ZH-CN\"/>\n" +
             "    </w:rPr>\n" +
-            "    <w:instrText> </w:instrText>\n" +
+            "    <w:instrText>  </w:instrText>\n" +
             "</w:r>\n";
 
     public static final String ONLY_WORD = "<w:r>\n" +
