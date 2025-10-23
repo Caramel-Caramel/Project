@@ -1,6 +1,8 @@
 package caramel.impl.pronounce;
 
 import okhttp3.*;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
@@ -14,7 +16,13 @@ public class GetPronounce {
             .build();
 
     public static void main(String[] args) throws IOException {
-        http("");
+        System.out.println(getTextWithPronounce("我是大好人？\r\n你呢"));
+    }
+
+    public static String getTextWithPronounce(String text) throws IOException {
+        String http = http(text);
+        Document document = Jsoup.parse(http, "UTF-8");
+        return document.getElementsByClass("kpc-textarea").get(1).text();
     }
 
     public static String http(String text) throws IOException {
@@ -24,21 +32,21 @@ public class GetPronounce {
         builder.addFormDataPart("input", text);
         builder.addFormDataPart("kpc_selectpingyam", "py_jyutping");
         builder.addFormDataPart("kpc_dicConv", "off");
-        builder.addFormDataPart("kpc_dicConv","on");
-        builder.addFormDataPart("kpc_forceConv","off");
-        builder.addFormDataPart("kpc_forceConvPingyam","py_yale_16");
-        builder.addFormDataPart("kpc_display_mode","kpc_display_mode_yoko_1_on_1");
-        builder.addFormDataPart("kpc_us_yoko_1_on_1_no_kakko","off");
-        builder.addFormDataPart("kpc_us_yoko_1_on_1_change_kakko","off");
-        builder.addFormDataPart("kpc_us_yoko_1_on_1_change_kakko_open","(");
-        builder.addFormDataPart("kpc_us_yoko_1_on_1_change_kakko_close",")");
-        builder.addFormDataPart("kpc_us_yoko_1_on_1_add_space","off");
-        builder.addFormDataPart("kpc_us_only_pingyam_no_space","off");
-        builder.addFormDataPart("kpc_us_only_pingyam_no_display_cannot_kanji","off");
-        builder.addFormDataPart("kpc_us_only_pingyam_no_conv_hankaku","off");
-        builder.addFormDataPart("kpc_NoConvArabicNum","off");
-        builder.addFormDataPart("kpc_notShowKanjiDescChar","off");
-        builder.addFormDataPart("kpc_notShowKanjiDescCharList","\n 　,.!?。、，！？");
+        builder.addFormDataPart("kpc_dicConv", "on");
+        builder.addFormDataPart("kpc_forceConv", "off");
+        builder.addFormDataPart("kpc_forceConvPingyam", "py_yale_16");
+        builder.addFormDataPart("kpc_display_mode", "kpc_display_mode_yoko_1_on_1");
+        builder.addFormDataPart("kpc_us_yoko_1_on_1_no_kakko", "off");
+        builder.addFormDataPart("kpc_us_yoko_1_on_1_change_kakko", "off");
+        builder.addFormDataPart("kpc_us_yoko_1_on_1_change_kakko_open", "(");
+        builder.addFormDataPart("kpc_us_yoko_1_on_1_change_kakko_close", ")");
+        builder.addFormDataPart("kpc_us_yoko_1_on_1_add_space", "off");
+        builder.addFormDataPart("kpc_us_only_pingyam_no_space", "off");
+        builder.addFormDataPart("kpc_us_only_pingyam_no_display_cannot_kanji", "off");
+        builder.addFormDataPart("kpc_us_only_pingyam_no_conv_hankaku", "off");
+        builder.addFormDataPart("kpc_NoConvArabicNum", "off");
+        builder.addFormDataPart("kpc_notShowKanjiDescChar", "off");
+        builder.addFormDataPart("kpc_notShowKanjiDescCharList", "\n 　,.!?。、，！？");
         builder.addFormDataPart("kpc_showErrorLog", "off");
 
         // 构建请求体

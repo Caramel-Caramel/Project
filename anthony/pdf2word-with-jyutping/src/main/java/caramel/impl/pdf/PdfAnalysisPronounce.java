@@ -14,7 +14,7 @@ public class PdfAnalysisPronounce {
         StringBuilder sb = new StringBuilder();
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(Entry.BASE_PATH + "\\txt\\" + txtFileName))) {
             for (String text : textArray) {
-                sb.append(text).append("\r\n");
+                sb.append(text.replace('[', ' ').replace(']', ' ')).append("\r\n");
                 if (sb.length() > 1000) {
                     String result = GetPronounce.getTextWithPronounce(sb.toString());
                     writer.write(result);
