@@ -19,18 +19,30 @@ public class Entry {
         Set<String> hadXmlFile = hadFile(BASE_PATH + "\\xml");
         Set<String> hadDocxFile = hadFile(BASE_PATH + "\\docx");
         for (File pdfFile : new File(BASE_PATH + "\\pdf").listFiles()) {
+            System.out.println("开始处理：" + pdfFile.getName());
             String txtFileName = pdfFile.getName().replace("pdf", "txt");
             String xmlFileName = pdfFile.getName().replace("pdf", "xml");
             String docxFileName = pdfFile.getName().replace("pdf", "docx");
-            if (!hadTxtFile.contains(txtFileName)) {
+            if (hadTxtFile.contains(txtFileName)) {
+                System.out.println("无需生成txt文件");
+            } else {
                 PdfAnalysisPronounce.process(txtFileName, pdfFile.getName());
+                System.out.println("生成txt文件：" + txtFileName);
             }
-            if (!hadXmlFile.contains(xmlFileName)) {
+            if (hadXmlFile.contains(xmlFileName)) {
+                System.out.println("无需生成xml文件");
+            } else {
                 XmlFileCreate.create(xmlFileName, txtFileName);
+                System.out.println("生成xml文件：" + xmlFileName);
             }
-            if (!hadDocxFile.contains(docxFileName)) {
+            if (hadDocxFile.contains(docxFileName)) {
+                System.out.println("无需生成docx文件");
+            } else {
                 DocxFileCreate.create(docxFileName, xmlFileName);
+                System.out.println("生成docx文件：" + docxFileName);
             }
+            System.out.println("结束处理：" + pdfFile.getName());
+            System.out.println("---------------------------------------------");
         }
     }
 
